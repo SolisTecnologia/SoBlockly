@@ -1,0 +1,73 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="d#U}}8QeyY8zV}nT4LcZ" x="-55" y="38">
+    <mutation elseif="2"></mutation>
+    <value name="IF0">
+      <block type="logic_operation" id="REl.!ZC#iT,@6!+s(fiP">
+        <field name="OP">OR</field>
+        <value name="A">
+          <block type="read_line" id=",U|Mh-gWCxm^ZBWe[3Rx">
+            <field name="sensor">1</field>
+            <field name="detected"></field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="read_line" id="8zOsE#``US_{Hxb+M{o}">
+            <field name="sensor">2</field>
+            <field name="detected"></field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="drive_forward" id="cyB2lno+Mv6~ytN00NVF">
+        <field name="speed">100</field>
+      </block>
+    </statement>
+    <value name="IF1">
+      <block type="logic_operation" id="9^@Y=Wsnoppy5-@5S=o0">
+        <field name="OP">OR</field>
+        <value name="A">
+          <block type="read_line" id="Foqz;-DUE^2ms/X4c6FL">
+            <field name="sensor">1</field>
+            <field name="detected"></field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="read_line" id="fmc)_NMoEc[!|(bc.}`B">
+            <field name="sensor">2</field>
+            <field name="detected">!</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO1">
+      <block type="drive_curve_differential_left" id="{c/W}EJ-b_AJ(oR%vN7W">
+        <field name="speed">100</field>
+        <field name="percent">30</field>
+      </block>
+    </statement>
+    <value name="IF2">
+      <block type="logic_operation" id="]k)a%AZzFWq/uA)]wCX[">
+        <field name="OP">OR</field>
+        <value name="A">
+          <block type="read_line" id="{la9P^LvMZV1xJnPa4[U">
+            <field name="sensor">1</field>
+            <field name="detected">!</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="read_line" id="cQeKVOL#]CZ/SDMJmz/[">
+            <field name="sensor">2</field>
+            <field name="detected"></field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO2">
+      <block type="drive_curve_differential_right" id="bY+ee]6YnWke;8~0Rdut">
+        <field name="speed">100</field>
+        <field name="percent">30</field>
+      </block>
+    </statement>
+  </block>
+</xml>

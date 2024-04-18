@@ -1,0 +1,53 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="%~kREvfwo=eu[MImOJ;b" x="203" y="99">
+    <mutation else="1"></mutation>
+    <value name="IF0">
+      <block type="read_ultrassonic" id="2ClVt}arCNH+%^CZQ!tq">
+        <field name="symbol">LT</field>
+        <field name="distance">15</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="drive_backward" id="vLd,f2Qnt:)gja_[2-{9">
+        <field name="speed">150</field>
+        <next>
+          <block type="time_delay" id="5=^K4k5rnj%W*ZACZ4Jt">
+            <value name="DELAY_TIME_MILI">
+              <block type="math_number" id="4W;z*GjuQ6-q#?5h=h=M">
+                <field name="NUM">1000</field>
+              </block>
+            </value>
+            <next>
+              <block type="drive_curve_right" id="Jjr(L@wCx4ignEaEi#.@">
+                <field name="speed">100</field>
+                <next>
+                  <block type="time_delay" id="Fu4I,!i=:#?-h5:EbGH|">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="XI4BkZW/69V`Z{F^7s9G">
+                        <field name="NUM">500</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="ELSE">
+      <block type="drive_forward" id="k8TJ%-?/T%A?w~PWMPLF">
+        <field name="speed">100</field>
+        <next>
+          <block type="time_delay" id="X?+2cLA6u69WgVkKbhIQ">
+            <value name="DELAY_TIME_MILI">
+              <block type="math_number" id="b(:TMyWdW=^66^Ka]+wg">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

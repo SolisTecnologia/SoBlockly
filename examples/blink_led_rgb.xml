@@ -1,0 +1,48 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="led_rgb" id="QD.2V6=fKtiq#O5DvZhZ" x="31" y="20">
+    <field name="lightRed">#ff0000</field>
+    <field name="lightGreen">#ffffff</field>
+    <field name="lightBlue">#ffffff</field>
+    <next>
+      <block type="time_delay" id="Q{lnQ2])Qqb(snKaL_G_">
+        <value name="DELAY_TIME_MILI">
+          <block type="math_number" id="SwNB2:hXE}-ExI{A[x/`">
+            <field name="NUM">1000</field>
+          </block>
+        </value>
+        <next>
+          <block type="led_rgb" id="wf?_!*5Qy][E2WWkx?Zk">
+            <field name="lightRed">#ffffff</field>
+            <field name="lightGreen">#00ff00</field>
+            <field name="lightBlue">#ffffff</field>
+            <next>
+              <block type="time_delay" id="?TqI_fRu(~N(X)VA@AL/">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id=";~|+]^)omQV;0JUG]qrT">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="led_rgb" id="h56jjW*Vn3Eyjc?m)|L#">
+                    <field name="lightRed">#ffffff</field>
+                    <field name="lightGreen">#ffffff</field>
+                    <field name="lightBlue">#0000ff</field>
+                    <next>
+                      <block type="time_delay" id="fl+SbD;#9Lu[~beZ;Zko">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="wij:+H-)=D9z/SAR(vp/">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

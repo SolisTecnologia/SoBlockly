@@ -1,0 +1,51 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="X2r`bgyU%~+5gWT@~Bvk" x="76" y="46">
+    <mutation else="1"></mutation>
+    <value name="IF0">
+      <block type="read_ultrassonic" id=".{6}11`BNiL/5zNuG4:^">
+        <field name="symbol">LT</field>
+        <field name="distance">10</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="led_rgb" id="(2:Of^p]z1F_x3)9C:~p">
+        <field name="lightRed">#ff0000</field>
+        <field name="lightGreen">#ffffff</field>
+        <field name="lightBlue">#ffffff</field>
+        <next>
+          <block type="buzzer" id="27GT.1TzAcRO(6WKzgx(">
+            <field name="note_buzzer">262</field>
+            <next>
+              <block type="time_delay" id="dT|kE4j.rNL?.fBS6dBG">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id="zSVs5@+,./sFmH?y_q{m">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="stop_buzzer" id="Y(l|5iPM.+[-g~lFW+^="></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="ELSE">
+      <block type="led_rgb" id="G!vqjz*KasS|u~L(.MWk">
+        <field name="lightRed">#ffffff</field>
+        <field name="lightGreen">#00ff00</field>
+        <field name="lightBlue">#ffffff</field>
+      </block>
+    </statement>
+    <next>
+      <block type="time_delay" id="55/-10-ctAZ:(gqknkv#">
+        <value name="DELAY_TIME_MILI">
+          <block type="math_number" id="j2#YIJ2b2:Gu/Y,=U#GF">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

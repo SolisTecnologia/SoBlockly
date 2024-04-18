@@ -1,0 +1,40 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="K%yd5hFy.UMhF7fHpaO0" x="527" y="-33">
+    <value name="IF0">
+      <block type="read_button" id="0HidzoOa)4nHEsDx`E5}">
+        <field name="status_pressed"></field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="led_rgb" id="rt#@HK%Nh..q:J*rgU0*">
+        <field name="lightRed">#ff0000</field>
+        <field name="lightGreen">#ffffff</field>
+        <field name="lightBlue">#ffffff</field>
+        <next>
+          <block type="buzzer" id="VT{S{,ZF;AB^yzClXK{P">
+            <field name="note_buzzer">262</field>
+            <next>
+              <block type="time_delay" id="`zjB11`[*Dw?jGk+`{FD">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id="4*BD9Q[|`]Q@}P9[(so=">
+                    <field name="NUM">500</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="led_rgb" id=";KU%A,+POK+Bidn6Z.]+">
+                    <field name="lightRed">#ffffff</field>
+                    <field name="lightGreen">#ffffff</field>
+                    <field name="lightBlue">#ffffff</field>
+                    <next>
+                      <block type="stop_buzzer" id="vzSeLp0h!wHZ5XNDXWvS"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
